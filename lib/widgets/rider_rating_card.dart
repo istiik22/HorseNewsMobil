@@ -36,7 +36,7 @@ class _RiderRatingCardState extends State<RiderRatingCard> {
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               itemCount: disciplines.length,
-              separatorBuilder: (_, __) => const SizedBox(width: 8),
+              separatorBuilder: (_, _) => const SizedBox(width: 8),
               itemBuilder: (_, i) {
                 final d = disciplines[i];
                 final active = d == selected;

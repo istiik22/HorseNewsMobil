@@ -3,6 +3,7 @@ import 'theme/app_theme.dart';
 import 'screens/home_screen.dart';
 import 'screens/library_screen.dart';
 import 'screens/news_screen.dart';
+import 'screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.dark,
-      home: const Root(),
+      home: const SplashScreen(),
     );
   }
 }
@@ -31,8 +32,6 @@ class Root extends StatefulWidget {
 class _RootState extends State<Root> {
   int index = 0;
 
-  // держим экраны в списке, чтобы состояние не терялось
-  // вариант 2 - использовать IndexedStack, он то же самое делает, но проще
   final pages = const [
     HomeScreen(),
     LibraryScreen(),

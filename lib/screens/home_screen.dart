@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/horse_of_day_card.dart';
 import '../widgets/countdown_card.dart';
 import '../widgets/rider_rating_card.dart';
+import '../widgets/weather_card.dart'; 
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,6 +15,8 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
         children: const [
           CountdownCard(),
+          SizedBox(height: 16),
+          WeatherCard(), // добавляем сюда
           SizedBox(height: 16),
           HorseOfDayCard(),
           SizedBox(height: 16),
